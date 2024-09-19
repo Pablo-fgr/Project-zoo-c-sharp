@@ -1,0 +1,38 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.7">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Web.WebView2" Version="1.0.2592.51" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\PAV_TPFinal_56340_Dominio\PAV_TPFinal_56340_Dominio.csproj" />
+    <ProjectReference Include="..\PAV_TPFinal_56340_Infraestructura\PAV_TPFinal_56340_Infraestructura_Datos.csproj" />
+    <ProjectReference Include="..\PAV_TPFinal_56340_Infraestructura_Transversal\PAV_TPFinal_56340_Infraestructura_Transversal.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Vistas\AgregarAnimalView.cs" />
+    <Compile Update="Vistas\Controles\SectorControl.cs" />
+    <Compile Update="Vistas\PrincipalView.cs" />
+    <Compile Update="Vistas\SectorView.cs" />
+    <Compile Update="Vistas\ViewBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Vistas\ViewBaseGeneric.cs" />
+    <Compile Update="Vistas\ZoologicoView.cs" />
+  </ItemGroup>
+
+</Project>
